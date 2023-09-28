@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <Div> Print ut vokaler:
+        <div id="vowels1"></div>
+        <input id="userInput" type="text" placeholder="Enter any word/Sentence">
+        <button onclick="PrintVowels()">Print out vowels</button>
+    </Div>
+
+    <script>
+        function PrintVowels() {
+            let userText = document.getElementById('userInput').value;
+            console.log("Input: " + userText)
+            let vowels = "aeiouyæøåAEIOUYÆØÅ"
+            let extractedVowels = '';
+
+            for(let i = 0; i < userText.length; i++){
+                if (vowels.includes(userText[i])){
+                    extractedVowels += userText[i];
+                } 
+            }
+
+            document.getElementById('vowels1').innerHTML = extractedVowels;
+            //let counter = 0;
+            //for (let i = 0; vowels <= userText.length; i++) {
+            //    counter++;
+            //}
+            //console.log("Loopen kjørte: " + counter + " ganger, den burde ha kjørt: " + userText.length + " ganger.")
+
+            //for (let i = 0; vowels <= userText.length; i++) {
+            //    if (vowels.includes(userText[i])) vowels += userText[i];
+                // if (markedvowels.indexOf(userText[i]) !== -1) {
+                //     vowels += userText[i];
+                // if (userText[i] == 'a' || userText[i] == 'A') {
+                //     vowels++;
+                // } if (userText[i] == 'e' || userText[i] == 'E') {
+                //     vowels++;
+                // } if (userText[i] == 'i' || userText[i] == 'I') {
+                //     vowels++;
+                // } if (userText[i] == 'o' || userText[i] == 'O') {
+                //     vowels++;
+                // } if (userText[i] == 'u' || userText[i] == 'U') {
+                //     vowels++;
+                // } if (userText[i] == 'y' || userText[i] == 'Y') {
+                //     vowels++;
+                // } if (userText[i] == 'æ' || userText[i] == 'Æ') {
+                //     vowels++;
+                // } if (userText[i] == 'ø' || userText[i] == 'Ø') {
+                //     vowels++;
+                // } if (userText[i] == 'å' || userText[i] == 'Å') {
+                //     vowels++;
+                // }  
+            }
+        
+    </script>
+</body>
+
+</html>
